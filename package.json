@@ -1,0 +1,22 @@
+{
+  "name": "compras",
+  "version": "1.0.0",
+  "description": "Sistema de Gestión de Compras - Autorizaciones y Control de Presupuesto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Compras",
+    "Presupuesto",
+    "Autorización"
+  ],
+  "author": "Guillermo Enrique Paladini",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "hbs": "^4.2.0",
+    "knex": "^1.0.4",
+    "mysql2": "^2.3.3"
+  }
+}
