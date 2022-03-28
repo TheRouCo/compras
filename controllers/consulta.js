@@ -7,10 +7,11 @@ const hacerConsulta = (req,res) => {
     .from('compras')
     .then((response) => {
         for(row of response){
-            console.log(`${row['compraID']}`);
+            console.log(response);
         }
         res.render('consulta',{ 
-        resultado: response[0],
+        compraNum: JSON.stringify(response[0].solCompraNum),
+        
                 
         });
 
