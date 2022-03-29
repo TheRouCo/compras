@@ -2,17 +2,15 @@ const knex = require('../db/config.js');
 
 const hacerConsulta = (req,res) => {
     console.log(`CONSULTA EJECUTADA EN CONTROLLADOR--> CONSULTA BBDD `);
-    knex //ESTOY HACIENDO ALGO MAL
-    .select("*")
-    .from('compras')
+    knex.select("*").from('compras')
     .then((response) => {
-        for(row of response){
-            console.log(response);
-        }
-        res.render('consulta',{ 
-        compraNum: JSON.stringify(response[0].solCompraNum),
-        
-                
+        res.render('consulta',{  
+            compraNum: JSON.stringify(response[20].solCompraNum),
+            solicit: JSON.stringify(response[20].solicitante),
+            cencost: JSON.stringify(response[20].centrocosto),
+            proveedor: JSON.stringify(response[20].provedor),
+            producserv: JSON.stringify(response[20].prodServ),
+            price: JSON.stringify(response[20].precio),        
         });
 
     })
