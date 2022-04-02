@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Consulta Estado de Compras</title>
+        <title>Consulta de Autorizaciones Pendientes</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -45,18 +45,13 @@
            {{#if respuesta}}
            <ul>
                <hr>
-                {{#each respuesta}}
+                {{#each respuesta}} {{!-- Esto incorporar en un Formulario con Inputs - Y agregar un boton al final de cada una para autorizar --}}
                     <li>Solicitud Número: {{this.solCompraNum}}</li>
                     <li>Solicitante: {{this.solicitante}}</li>
                     <li>Centro de Costo: {{this.centrocosto}}</li>
                     <li>Proveedor: {{this.provedor}}</li>
                     <li>Producto o Servicio: {{this.prodServ}}</li>
                     <li>Precio $: {{this.precio}}</li>
-                    {{#if this.autorizado}}
-                        <li>Autorizado: SI</li>
-                    {{else}}
-                        <li>Autorizado: NO</li>
-                    {{/if}}
                     <hr>
                 {{/each}}
            </ul>

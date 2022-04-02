@@ -9,7 +9,6 @@ const {
    hacerConsulta
 } = require('../controllers/consulta');
 
-
 router.get('/', hacerConsulta); //Consulta las Ordenes de Compra
 
 module.exports = router;

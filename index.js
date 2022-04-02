@@ -47,10 +47,5 @@ app.use('/api/compra', require('./routes/compra'));
 
 app.use('/api/consulta', require('./routes/consulta'));
 
-/*
-app.post('/submit-form', (req, res) => {
-    const username = req.body.username
-    
-    res.end()
-})
-*/
+app.use('/api/autorizaciones', require('./routes/autorizaciones'));
+
